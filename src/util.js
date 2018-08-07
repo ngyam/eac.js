@@ -43,6 +43,8 @@ const checkNetworkID = (web3) => {
       else if (netID === '4') resolve(false)
       // kovan
       else if (netID === '42') resolve(true)
+      // tobalaba
+      else if (netID === '401697') resolve(true)
       else resolve(false)
     })
   })
@@ -145,6 +147,8 @@ const getChainName = web3 => new Promise((resolve, reject) => {
         resolve("rinkeby")
       } else if (netID === '42') {
         resolve("kovan")
+      } else if (netID === '401697') {
+        resolve("tobalaba")
       } else if (netID > 1517361627) {
         resolve("tester")
       } else {
